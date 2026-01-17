@@ -1,0 +1,28 @@
+body {
+  padding-top: 70px;
+}
+
+.events-hero {
+  height: 50vh;
+  background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+              url("https://images.unsplash.com/photo-1687294088443-f207b36b0469")
+              center/cover no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.event-card {
+  background: #fff;
+  border: 1px solid #eee;
+  transition: transform .3s;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+}
+
+.event-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}

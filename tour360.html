@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>360° Exploration</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="tour360.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="home.html">Bazaar360</a>
+
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="home.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="tour360.html">360° Tours</a></li>
+        <li class="nav-item"><a class="nav-link" href="ar_stories.html">AR Stories</a></li>
+        <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+        <li class="nav-item"><a class="nav-link" href="map.html">Map</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="tour-hero text-white">
+  <div class="container">
+    <h1 class="display-5 fw-bold">360° Virtual Exploration</h1>
+    <p class="lead text-light mt-3">
+      Navigate through immersive panoramic views of Pazari i Ri.
+    </p>
+  </div>
+</header>
+
+<!-- MAIN CONTENT -->
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4">
+
+      <!-- 360 VIEW -->
+      <div class="col-lg-8">
+        <div class="viewer-box">
+          <img src="https://images.unsplash.com/photo-1728733287961-570ecea608bf?q=80&w=1400"
+               alt="Pazari i Ri"
+               class="img-fluid">
+
+          <!-- HOTSPOTS -->
+          <span class="hotspot" style="top:35%; left:55%;" data-title="Main Square"></span>
+          <span class="hotspot" style="top:65%; left:30%;" data-title="Artisan Shop"></span>
+        </div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <div class="col-lg-4">
+        <h4 class="fw-bold mb-4">Locations</h4>
+
+        <div class="location-card active">
+          <h6>Main Square</h6>
+          <small>12 interactive points</small>
+        </div>
+
+        <div class="location-card">
+          <h6>Artisan Corner</h6>
+          <small>8 interactive points</small>
+        </div>
+
+        <div class="location-card">
+          <h6>Central Plaza</h6>
+          <small>15 interactive points</small>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-light py-4">
+  <div class="container text-center">
+    <p class="mb-0">© 2026 Bazaar360 – Bashkia Tiranë</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="tour360.js"></script>
+</body>
+</html>

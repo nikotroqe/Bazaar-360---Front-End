@@ -1,0 +1,45 @@
+body {
+  padding-top: 70px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.tour-hero {
+  background: #000;
+  padding: 120px 0 80px;
+}
+
+.viewer-box {
+  position: relative;
+  border: 1px solid #ddd;
+  overflow: hidden;
+}
+
+.hotspot {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: #d4a017;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+
+.location-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.location-card:hover,
+.location-card.active {
+  background: #b63e3e;
+  color: white;
+}

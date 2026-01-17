@@ -1,0 +1,19 @@
+body {
+  padding-top: 70px;
+  font-family: Arial, sans-serif;
+}
+
+.ar-hero {
+  height: 60vh;
+  background: linear-gradient(
+    rgba(0,0,0,0.6),
+    rgba(0,0,0,0.6)
+  ),
+  url("https://images.unsplash.com/photo-1687294088443-f207b36b0469")
+  center/cover no-repeat;
+}
+
+.step-box h4 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
