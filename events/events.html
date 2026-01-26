@@ -40,8 +40,8 @@
 
 <header class="events-hero text-white text-center">
   <div class="container">
-    <h1 class="fw-bold">Upcoming Events</h1>
-    <p class="lead">Culture, food and tradition at Pazari i Ri</p>
+    <h1 class="fw-bold">Cultural Events & Calendar</h1>
+    <p class="lead">Stay connected with the vibrant community life at Pazari i Ri. From festivals to workshops, never miss a moment.</p>
   </div>
 </header>
 
@@ -49,45 +49,137 @@
   <div class="container">
     <div class="row g-4">
 
-      <div class="col-md-4">
-        <div class="event-card">
+      <!-- SIDEBAR -->
+      <aside class="col-lg-3">
+        <div class="sidebar-box mb-4 calendar-box">
+          <h6 class="fw-bold mb-3">Select Date</h6>
+
+          <div class="d-flex justify-content-between align-items-center mb-2 calendar-header">
+            <button class="btn btn-sm btn-light" id="prevMonth">&lsaquo;</button>
+            <strong id="calendarTitle"></strong>
+            <button class="btn btn-sm btn-light" id="nextMonth">&rsaquo;</button>
+          </div>
+
+          <table class="calendar-table">
+            <thead>
+              <tr>
+                <th>Su</th>
+                <th>Mo</th>
+                <th>Tu</th>
+                <th>We</th>
+                <th>Th</th>
+                <th>Fr</th>
+                <th>Sa</th>
+              </tr>
+            </thead>
+            <tbody id="calendarBody">
+              <!-- JS e mbush -->
+            </tbody>
+          </table>
+        </div>
+
+        <div class="sidebar-box">
+          <h6 class="fw-bold mb-3">Categories</h6>
+          <ul class="list-unstyled category-list">
+            <li>All Events</li>
+            <li>Festivals</li>
+            <li>Workshops</li>
+            <li>Food Events</li>
+            <li>Markets</li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- EVENTS LIST -->
+      <main class="col-lg-9">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h3 class="fw-bold mb-0">Upcoming Events</h3>
+          <div>
+            <button class="btn btn-dark btn-sm">List View</button>
+            <button class="btn btn-outline-dark btn-sm">Grid View</button>
+          </div>
+        </div>
+
+        <!-- EVENT ITEM -->
+        <div class="event-list-item mb-4">
           <img src="https://images.unsplash.com/photo-1580052040395-32c97dcb60de" alt="">
-          <div class="p-4">
-            <h5>Albanian Heritage Festival</h5>
-            <p class="text-muted">October 25, 2025</p>
-            <p>Traditional music, dance and artisan demonstrations.</p>
-            <button class="btn btn-danger btn-sm">View Details</button>
+          <div class="event-info">
+            <span class="badge bg-secondary mb-2">Festival</span>
+            <h4>Albanian Heritage Festival</h4>
+            <p class="text-muted mb-2">
+              📅 October 25, 2025 &nbsp; ⏰ 10:00 AM – 6:00 PM<br>
+              📍 Main Square, Pazari i Ri &nbsp; 👥 500 attending
+            </p>
+            <p>
+              Celebrate Albanian culture with traditional music, dance
+              performances, and artisan demonstrations.
+            </p>
+            <div class="d-flex gap-2">
+              <button class="btn btn-danger">Reserve Spot →</button>
+              <button class="btn btn-outline-secondary">Details</button>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="col-md-4">
-        <div class="event-card">
-          <img src="https://images.unsplash.com/photo-1761910932253-e2f8b2bc2f9a" alt="">
-          <div class="p-4">
-            <h5>Artisan Workshop</h5>
-            <p class="text-muted">October 28, 2025</p>
-            <p>Learn crafts directly from local artisans.</p>
-            <button class="btn btn-danger btn-sm">View Details</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="event-card">
+        <!-- EVENT ITEM -->
+        <div class="event-list-item">
           <img src="https://images.unsplash.com/photo-1567013770464-15058f5808c7" alt="">
-          <div class="p-4">
-            <h5>Taste of Tirana</h5>
-            <p class="text-muted">November 2, 2025</p>
-            <p>Discover authentic Albanian food.</p>
-            <button class="btn btn-danger btn-sm">View Details</button>
+          <div class="event-info">
+            <span class="badge bg-secondary mb-2">Workshop</span>
+            <h4>Artisan Workshop Series</h4>
+            <p class="text-muted mb-2">
+              📅 October 28, 2025 &nbsp; ⏰ 2:00 PM – 5:00 PM<br>
+              📍 Artisan Corner &nbsp; 👥 30 attending
+            </p>
+            <p>
+              Learn traditional crafts directly from master artisans.
+              Limited spots available.
+            </p>
+            <div class="d-flex gap-2">
+              <button class="btn btn-danger">Reserve Spot →</button>
+              <button class="btn btn-outline-secondary">Details</button>
+            </div>
           </div>
         </div>
-      </div>
 
+        <div class="event-list-item mb-4 extra-event d-none">
+          <img src="https://images.unsplash.com/photo-1761910932253-e2f8b2bc2f9a" alt="Food Fair">
+
+          <div class="event-info">
+            <span class="badge bg-secondary mb-2">Food</span>
+
+            <h4>Taste of Tirana Food Fair</h4>
+
+            <p class="text-muted mb-2">
+              📅 November 2, 2025 <br>
+              ⏰ 12:00 PM – 8:00 PM <br>
+              📍 Central Plaza <br>
+              👥 800 attending
+            </p>
+
+            <p>
+              Sample authentic Albanian cuisine from the best vendors
+              at Pazari i Ri.
+            </p>
+
+            <div class="d-flex gap-2">
+              <button class="btn btn-danger">Reserve Spot →</button>
+              <button class="btn btn-outline-secondary">Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-4">
+          <button id="loadMoreBtn" class="btn btn-outline-secondary px-4">
+            Load More Events
+          </button>
+        </div>
+
+      </main>
     </div>
   </div>
 </section>
+
 <!--FOOTER-->
 <footer class="border-top bg-dark text-light">
   <div class="container py-5">

@@ -1,28 +1,202 @@
+/* =====================
+   GLOBAL
+===================== */
+
 body {
   padding-top: 70px;
+  background-color: #f8f9fa;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
+
+/* =====================
+   HERO SECTION
+===================== */
 
 .events-hero {
   height: 50vh;
-  background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
-              url("https://images.unsplash.com/photo-1687294088443-f207b36b0469")
-              center/cover no-repeat;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://images.unsplash.com/photo-1687294088443-f207b36b0469")
+    center / cover no-repeat;
   display: flex;
   align-items: center;
 }
 
-.event-card {
-  background: #fff;
-  border: 1px solid #eee;
-  transition: transform .3s;
+.events-hero h1 {
+  font-size: 3rem;
 }
 
-.event-card:hover {
-  transform: translateY(-5px);
+.events-hero p {
+  opacity: 0.9;
 }
 
-.event-card img {
+/* =====================
+   SIDEBAR
+===================== */
+
+.sidebar-box {
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  padding: 20px;
+}
+
+.sidebar-box h6 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.category-list {
+  margin: 0;
+  padding: 0;
+}
+
+.category-list li {
+  list-style: none;
+  padding: 8px 0;
+  cursor: pointer;
+  color: #555;
+  transition: color 0.2s ease;
+}
+
+.category-list li:hover {
+  color: #000;
+  font-weight: 500;
+}
+
+/* =====================
+   CALENDAR
+===================== */
+
+.calendar-header {
+  font-size: 0.9rem;
+}
+
+.calendar-table {
   width: 100%;
-  height: 200px;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.calendar-table th {
+  padding: 6px 0;
+  color: #777;
+  font-weight: 500;
+}
+
+.calendar-table td {
+  padding: 8px 0;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.15s ease;
+}
+
+.calendar-table td:hover {
+  background-color: #f1f1f1;
+}
+
+.calendar-table .muted {
+  color: #bbb;
+  cursor: default;
+}
+
+.calendar-table .active-day {
+  background-color: #b6403c;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* =====================
+   EVENTS LIST
+===================== */
+
+.event-list-item {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  border: 1px solid #e5e5e5;
+  background: #ffffff;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.event-list-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.event-list-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.event-list-item img {
+  width: 260px;
+  height: 180px;
   object-fit: cover;
+}
+
+.event-info {
+  flex: 1;
+}
+
+.event-info h4 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+.event-info p {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.event-info .badge {
+  font-size: 0.7rem;
+  letter-spacing: 0.5px;
+}
+
+/* =====================
+   BUTTONS
+===================== */
+
+.btn-danger {
+  background-color: #b6403c;
+  border-color: #b6403c;
+}
+
+.btn-danger:hover {
+  background-color: #9e3532;
+  border-color: #9e3532;
+}
+
+/* =====================
+   FOOTER
+===================== */
+
+footer {
+  margin-top: 80px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+
+@media (max-width: 992px) {
+  .events-hero h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .event-list-item {
+    flex-direction: column;
+  }
+
+  .event-list-item img {
+    width: 100%;
+    height: 220px;
+  }
 }
