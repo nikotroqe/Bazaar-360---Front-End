@@ -1,57 +1,63 @@
 body {
   font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f9fa;
 }
 
-/* Sidebar */
-.sidebar {
-  min-height: 100vh;
-  background-color: #111827;
+/* Header */
+.dashboard-hero {
+  margin-top: 72px;
+  padding: 24px 0;
+  background: #000000;
   color: white;
 }
 
-.sidebar a {
-  color: white;
-  text-decoration: none;
+.dashboard-hero h1 {
+  font-size: 1.8rem;
 }
 
-.sidebar a:hover {
-  background-color: #1f2937;
-  color: #fbbf24;
+/* Content */
+.dashboard-content {
+  padding: 40px 0;
 }
 
-/* Table hover */
-.table-hover tbody tr:hover {
-  background-color: #f3f4f6;
+/* Tabs */
+.nav-pills .nav-link {
+  color: #555;
+  background: transparent;
+}
+
+.nav-pills .nav-link.active {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #ddd;
+}
+
+/* Stats */
+.stat-card {
+  border-radius: 8px;
+}
+
+/* Lists */
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.list-item:last-child {
+  border-bottom: none;
 }
 
 /* Status badges */
-.status-draft {
-  background-color: #f3f4f6;
-  color: #6b7280;
-  padding: 3px 8px;
-  border-radius: 4px;
-  font-size: 0.8rem;
-}
-
 .status-published {
   background-color: #dcfce7;
   color: #15803d;
-  padding: 3px 8px;
-  border-radius: 4px;
-  font-size: 0.8rem;
 }
 
-/* Footer */
-footer {
-  background-color: #000;
-  color: #fff;
+.status-draft {
+  background-color: #f3f4f6;
+  color: #6b7280;
 }
 
-footer a {
-  color: #9ca3af;
-  text-decoration: none;
-}
-
-footer a:hover {
-  color: #fff;
-}

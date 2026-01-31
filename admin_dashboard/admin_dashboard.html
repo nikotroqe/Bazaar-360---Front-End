@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="admin_dashboard.css">
 </head>
 <body>
-  <main class="container-fluid" style="padding-top:90px; background:#f8f9fa;">
+  
   <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-white shadow-sm">
   <div class="container">
@@ -46,37 +46,37 @@
     </div>
   </div>
 </nav>
-
-
-    <!-- HEADER -->
-    <div class="dashboard-header d-flex justify-content-between mb-4">
-        <div>
-            <h1>Admin Dashboard</h1>
-            <p>Manage content, locations, and events for n'Bazaar360</p>
-        </div>
-        <button class="btn-add">Add New</button>
+<!-- HEADER -->
+<header class="dashboard-hero border-bottom">
+  <div class="container d-flex justify-content-between align-items-center">
+    <div>
+      <h1 class="fw-bold mb-1">Admin Dashboard</h1>
+      <p class="text-light mb-0">
+        Manage content, locations, and events for n'Bazaar360
+      </p>
     </div>
+    <button class="btn btn-danger px-4">+ Add New</button>
+  </div>
+</header>
+
+<!-- DASHBOARD CONTENT -->
+<section class="dashboard-content">
+  <div class="container">
 
     <!-- TABS -->
-    <ul class="nav nav-pills mb-4 bg-light p-2 rounded">
-      <li class="nav-item">
-        <a class="nav-link active" href="#">Overview</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">AR Stories</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Locations</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Events</a>
-      </li>
+    <ul class="nav nav-pills mb-4" id="dashboardTabs">
+      <li class="nav-item"><a href="#" class="nav-link active" data-target="overview">Overview</a></li>
+      <li class="nav-item"><a href="#" class="nav-link" data-target="ar-stories">AR Stories</a></li>
+      <li class="nav-item"><a href="#" class="nav-link" data-target="locations">Locations</a></li>
+      <li class="nav-item"><a href="#" class="nav-link" data-target="events">Events</a></li>
     </ul>
 
+    <!-- OVERVIEW -->
+    <div id="overview" class="tab-content">
     <!-- STATS -->
     <div class="row g-4 mb-5">
       <div class="col-md-3">
-        <div class="card shadow-sm">
+        <div class="card shadow-sm stat-card">
           <div class="card-body">
             <small class="text-success fw-semibold">+12.5%</small>
             <h3 class="fw-bold mt-2">45,231</h3>
@@ -86,7 +86,7 @@
       </div>
 
       <div class="col-md-3">
-        <div class="card shadow-sm">
+        <div class="card shadow-sm stat-card">
           <div class="card-body">
             <small class="text-success fw-semibold">+3</small>
             <h3 class="fw-bold mt-2">28</h3>
@@ -96,7 +96,7 @@
       </div>
 
       <div class="col-md-3">
-        <div class="card shadow-sm">
+        <div class="card shadow-sm stat-card">
           <div class="card-body">
             <small class="text-success fw-semibold">+5</small>
             <h3 class="fw-bold mt-2">45</h3>
@@ -106,7 +106,7 @@
       </div>
 
       <div class="col-md-3">
-        <div class="card shadow-sm">
+        <div class="card shadow-sm stat-card">
           <div class="card-body">
             <small class="text-success fw-semibold">+2</small>
             <h3 class="fw-bold mt-2">12</h3>
@@ -125,28 +125,28 @@
           <div class="card-body">
             <h5 class="fw-bold mb-4">Recent Stories</h5>
 
-            <div class="d-flex justify-content-between mb-3">
+            <div class="list-item">
               <div>
                 <strong>The Master Coppersmith</strong><br>
                 <small class="text-muted">Agim Gjini</small>
               </div>
-              <span class="badge badge-published">Published</span>
+              <span class="badge status-published">Published</span>
             </div>
 
-            <div class="d-flex justify-content-between mb-3">
+            <div class="list-item">
               <div>
                 <strong>Traditional Pottery</strong><br>
                 <small class="text-muted">Elvira Hoxha</small>
               </div>
-              <span class="badge badge-published">Published</span>
+              <span class="badge status-published">Published</span>
             </div>
 
-            <div class="d-flex justify-content-between">
+            <div class="list-item">
               <div>
                 <strong>Textile Heritage</strong><br>
                 <small class="text-muted">Fatmir Shehu</small>
               </div>
-              <span class="badge bg-secondary">Draft</span>
+              <span class="badge status-draft">Draft</span>
             </div>
 
           </div>
@@ -159,7 +159,7 @@
           <div class="card-body">
             <h5 class="fw-bold mb-4">Top Locations</h5>
 
-            <div class="d-flex justify-content-between mb-3">
+            <div class="list-item">
               <div>
                 <strong>Traditional Pottery Shop</strong><br>
                 <small class="text-muted">Shop</small>
@@ -170,7 +170,7 @@
               </div>
             </div>
 
-            <div class="d-flex justify-content-between mb-3">
+            <div class="list-item">
               <div>
                 <strong>Café Pazari</strong><br>
                 <small class="text-muted">Café</small>
@@ -181,7 +181,7 @@
               </div>
             </div>
 
-            <div class="d-flex justify-content-between">
+            <div class="list-item">
               <div>
                 <strong>Artisan Textile Market</strong><br>
                 <small class="text-muted">Market</small>
@@ -197,8 +197,246 @@
       </div>
 
     </div>
+
   </div>
-</main>
+
+  <!-- AR Stories -->
+  <div id="ar-stories" class="tab-content" style="display:none;">
+  <div class="container">
+    <div class="card shadow-sm">
+      <div class="card-body">
+
+        <!-- HEADER -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h3 class="fw-bold mb-0">AR Stories Management</h3>
+          <button class="btn btn-dark px-4">+ Add Story</button>
+        </div>
+
+        <!-- TABLE -->
+        <div class="table-responsive">
+          <table class="table align-middle table-hover">
+            <thead class="table-light">
+              <tr>
+                <th>Title</th>
+                <th>Artisan</th>
+                <th>Status</th>
+                <th>Views</th>
+                <th class="text-end">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>The Master Coppersmith</td>
+                <td>Agim Gjini</td>
+                <td><span class="status-published">Published</span></td>
+                <td>2,543</td>
+                <td class="text-end action-icons">
+                  <i class="bi bi-eye" onclick="viewStory('The Master Coppersmith')"></i>
+                  <i class="bi bi-pencil" onclick="editStory('The Master Coppersmith')"></i>
+                  <i class="bi bi-trash" onclick="deleteStory(this)"></i>
+                </td>
+              </tr>
+              <tr>
+                <td>Traditional Pottery</td>
+                <td>Elvira Hoxha</td>
+                <td><span class="status-published">Published</span></td>
+                <td>3,102</td>
+                <td class="text-end action-icons">
+                  <i class="bi bi-eye"></i>
+                  <i class="bi bi-pencil"></i>
+                  <i class="bi bi-trash"></i>
+                </td>
+              </tr>
+              <tr>
+                <td>Textile Heritage</td>
+                <td>Fatmir Shehu</td>
+                <td><span class="status-draft">Draft</span></td>
+                <td>0</td>
+                <td class="text-end action-icons">
+                  <i class="bi bi-eye"></i>
+                  <i class="bi bi-pencil"></i>
+                  <i class="bi bi-trash"></i>
+                </td>
+              </tr>
+              <tr>
+                <td>Albanian Jewelry</td>
+                <td>Mirela Dervishi</td>
+                <td><span class="status-published">Published</span></td>
+                <td>4,221</td>
+                <td class="text-end action-icons">
+                  <i class="bi bi-eye"></i>
+                  <i class="bi bi-pencil"></i>
+                  <i class="bi bi-trash"></i>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Locations -->
+<div id="locations" class="tab-content" style="display:none;">
+  <div class="container">
+    <div class="card shadow-sm">
+      <div class="card-body">
+
+        <!-- HEADER -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h3 class="fw-bold mb-0">Location Management</h3>
+          <button class="btn btn-dark px-4">+ Add Location</button>
+        </div>
+
+        <!-- TABLE -->
+        <div class="table-responsive">
+          <table class="table align-middle table-hover">
+            <thead class="table-light">
+              <tr>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Status</th>
+                <th>Visits</th>
+                <th class="text-end">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Traditional Pottery Shop</td>
+                <td>Shop</td>
+                <td><span class="status-published">Verified</span></td>
+                <td>892</td>
+                <td class="text-end action-icons">
+                  <i class="bi bi-eye" onclick="viewStory('The Master Coppersmith')"></i>
+                  <i class="bi bi-pencil" onclick="editStory('The Master Coppersmith')"></i>
+                  <i class="bi bi-trash" onclick="deleteStory(this)"></i>
+                </td>
+              </tr>
+              <tr>
+                <td>Café Pazari</td>
+                <td>Café</td>
+                <td><span class="status-published">Verified</span></td>
+                <td>1205</td>
+                <td class="text-end action-icons">
+                  <i class="bi bi-eye"></i>
+                  <i class="bi bi-pencil"></i>
+                  <i class="bi bi-trash"></i>
+                </td>
+              </tr>
+              <tr>
+                <td>Artisan Textile Market</td>
+                <td>Market</td>
+                <td><span class="status-draft">Pending</span></td>
+                <td>654</td>
+                <td class="text-end action-icons">
+                  <i class="bi bi-eye"></i>
+                  <i class="bi bi-pencil"></i>
+                  <i class="bi bi-trash"></i>
+                </td>
+              </tr>
+              <tr>
+                <td>Restaurant Tradicionale</td>
+                <td>Restaurant</td>
+                <td><span class="status-published">Verified</span></td>
+                <td>1876</td>
+                <td class="text-end action-icons">
+                  <i class="bi bi-eye"></i>
+                  <i class="bi bi-pencil"></i>
+                  <i class="bi bi-trash"></i>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<div id="locations" class="tab-content" style="display:none;">
+  <section class="dashboard-section py-4">
+    <div class="container">
+      <div class="card shadow-sm">
+        <div class="card-body">
+
+          <!-- HEADER -->
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <h3 class="fw-bold mb-0">Location Management</h3>
+            <button class="btn btn-dark px-4">+ Add Location</button>
+          </div>
+
+          <!-- TABLE -->
+          <div class="table-responsive">
+            <table class="table align-middle table-hover">
+              <thead class="table-light">
+                <tr>
+                  <th>Name</th>
+                  <th>Category</th>
+                  <th>Status</th>
+                  <th>Visits</th>
+                  <th class="text-end">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Traditional Pottery Shop</td>
+                  <td>Shop</td>
+                  <td><span class="status-published">Verified</span></td>
+                  <td>892</td>
+                  <td class="text-end action-icons">
+                    <i class="bi bi-eye" onclick="viewStory('The Master Coppersmith')"></i>
+                    <i class="bi bi-pencil" onclick="editStory('The Master Coppersmith')"></i>
+                    <i class="bi bi-trash" onclick="deleteStory(this)"></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Café Pazari</td>
+                  <td>Café</td>
+                  <td><span class="status-published">Verified</span></td>
+                  <td>1205</td>
+                  <td class="text-end action-icons">
+                    <i class="bi bi-eye"></i>
+                    <i class="bi bi-pencil"></i>
+                    <i class="bi bi-trash"></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Artisan Textile Market</td>
+                  <td>Market</td>
+                  <td><span class="status-draft">Pending</span></td>
+                  <td>654</td>
+                  <td class="text-end action-icons">
+                    <i class="bi bi-eye"></i>
+                    <i class="bi bi-pencil"></i>
+                    <i class="bi bi-trash"></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Restaurant Tradicionale</td>
+                  <td>Restaurant</td>
+                  <td><span class="status-published">Verified</span></td>
+                  <td>1876</td>
+                  <td class="text-end action-icons">
+                    <i class="bi bi-eye"></i>
+                    <i class="bi bi-pencil"></i>
+                    <i class="bi bi-trash"></i>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
 
   <!-- Footer -->
 <footer class="border-top bg-dark text-light">
