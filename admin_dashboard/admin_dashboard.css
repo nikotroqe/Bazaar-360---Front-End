@@ -1,0 +1,57 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+  min-height: 100vh;
+  background-color: #111827;
+  color: white;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  background-color: #1f2937;
+  color: #fbbf24;
+}
+
+/* Table hover */
+.table-hover tbody tr:hover {
+  background-color: #f3f4f6;
+}
+
+/* Status badges */
+.status-draft {
+  background-color: #f3f4f6;
+  color: #6b7280;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.status-published {
+  background-color: #dcfce7;
+  color: #15803d;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+/* Footer */
+footer {
+  background-color: #000;
+  color: #fff;
+}
+
+footer a {
+  color: #9ca3af;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #fff;
+}

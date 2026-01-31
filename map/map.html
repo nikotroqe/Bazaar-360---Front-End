@@ -30,6 +30,7 @@
         <li class="nav-item"><a class="nav-link" href="../events/events.html">Events</a></li>
         <li class="nav-item"><a class="nav-link" href="../map/map.html">Map</a></li>
         <li class="nav-item"><a class="nav-link" href="../contact/contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="../admin_dashboard/admin_dashboard.html">Admin</a></li>
       </ul>
 
       <!-- Search (djathtas) -->
@@ -55,72 +56,181 @@
 </header>
 
 <!-- MAP SECTION -->
-<section class="py-5">
+<section class="py-5 bg-white">
   <div class="container">
     <div class="row g-4">
 
-      <!-- MAP -->
+      <!-- MAP COLUMN -->
       <div class="col-lg-8">
+
+        <!-- SEARCH -->
+        <div class="mb-3 position-relative">
+          <input id="mapSearch" type="text" class="form-control ps-5"
+                 placeholder="Search locations...">
+          <span class="search-icon">🔍</span>
+        </div>
+
+        <!-- MAP -->
         <div class="map-container">
 
-          <img src="https://images.unsplash.com/photo-1687294088443-f207b36b0469"
-               alt="Bazaar Map">
+          <img src="https://images.unsplash.com/photo-1759802524049-2421ddaee0fe"
+               alt="Pazari i Ri Map">
 
           <!-- MARKERS -->
-          <button class="map-marker cafe"
-                  data-name="Café Pazari"
-                  data-category="cafe"
-                  style="top:38%; left:40%;">☕</button>
-
           <button class="map-marker shop"
-                  data-name="Traditional Pottery Shop"
-                  data-category="shop"
-                  style="top:26%; left:32%;">🏺</button>
+            data-name="Traditional Pottery Shop"
+            data-category="Shops"
+            data-desc="Authentic Albanian ceramics and pottery"
+            data-hours="9:00 AM - 6:00 PM"
+            data-image="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261"
+            style="top:25%; left:30%;">🏺</button>
 
-          <button class="map-marker restaurant"
-                  data-name="Restaurant Tradicionale"
-                  data-category="restaurant"
-                  style="top:58%; left:52%;">🍽️</button>
+          <button class="map-marker cafe"
+            data-name="Café Pazari"
+            data-category="Cafes"
+            data-desc="Local coffee in the heart of Pazari"
+            data-hours="7:00 AM - 10:00 PM"
+            data-image="https://images.unsplash.com/photo-1509042239860-f550ce710b93"
+            style="top:37%; left:38%;">☕</button>
 
           <button class="map-marker market"
-                  data-name="Artisan Market"
-                  data-category="market"
-                  style="top:72%; left:64%;">🛍️</button>
+            data-name="Artisan Textile Market"
+            data-category="Markets"
+            data-desc="Handmade textiles and crafts"
+            data-hours="8:00 AM - 5:00 PM"
+            data-image="https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d"
+            style="top:49%; left:46%;">🛍️</button>
+
+          <button class="map-marker restaurant"
+            data-name="Restaurant Tradicionale"
+            data-category="Restaurants"
+            data-desc="Traditional Albanian cuisine"
+            data-hours="11:00 AM - 11:00 PM"
+            data-image="https://images.unsplash.com/photo-1600891964599-f61ba0e24092"
+            style="top:61%; left:54%;">🍽️</button>
+
+          <button class="map-marker shop"
+            data-name="Copper Workshop"
+            data-category="Shops"
+            data-desc="Handcrafted copper souvenirs"
+            data-hours="9:00 AM - 6:00 PM"
+            data-image="https://images.unsplash.com/photo-1519681393784-d120267933ba"
+            style="top:73%; left:62%;">⚒️</button>
+
+          <button class="map-marker cafe"
+            data-name="Morning Brew Café"
+            data-category="Cafes"
+            data-desc="Fresh coffee every morning"
+            data-hours="7:00 AM - 9:00 PM"
+            data-image="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085"
+            style="top:85%; left:70%;">☕</button>
+
+          <!-- ZOOM -->
+          <div class="map-controls">
+            <button type="button">+</button>
+            <button type="button">−</button>
+          </div>
         </div>
+
+        <!-- INFO PANEL -->
+        <div id="locationPanel" class="location-panel d-none mt-4">
+          <button id="closePanel" class="panel-close">×</button>
+
+          <div class="panel-content d-flex gap-3">
+            <img id="panelImage" alt="Location image">
+            <div>
+              <h5 id="panelTitle"></h5>
+              <span id="panelCategory"></span>
+              <p id="panelDescription"></p>
+              <p><strong>Hours:</strong> <span id="panelHours"></span></p>
+              <button class="btn btn-dark btn-sm">Get Directions</button>
+            </div>
+          </div>
+        </div>
+
       </div>
 
       <!-- SIDEBAR -->
       <div class="col-lg-4">
 
-        <!-- SEARCH -->
-        <input id="mapSearch" class="form-control mb-4"
-               type="text" placeholder="Search locations...">
-
-        <!-- FILTERS -->
-        <div class="mb-4">
+        <div class="sidebar-box">
           <h5 class="fw-bold mb-3">Categories</h5>
-          <div class="d-grid gap-2">
-            <button class="btn btn-outline-dark filter-btn active" data-filter="all">All</button>
-            <button class="btn btn-outline-dark filter-btn" data-filter="shop">Shops</button>
-            <button class="btn btn-outline-dark filter-btn" data-filter="cafe">Cafés</button>
-            <button class="btn btn-outline-dark filter-btn" data-filter="restaurant">Restaurants</button>
-            <button class="btn btn-outline-dark filter-btn" data-filter="market">Markets</button>
-          </div>
+          <ul class="category-list">
+            <li data-filter="all">All <span>45</span></li>
+            <li data-filter="shop">Shops <span>18</span></li>
+            <li data-filter="cafe">Cafes <span>12</span></li>
+            <li data-filter="restaurant">Restaurants <span>10</span></li>
+            <li data-filter="market">Markets <span>5</span></li>
+          </ul>
         </div>
 
-        <!-- INFO -->
-        <div class="info-box">
-          <h6 class="fw-bold">How it works</h6>
-          <p class="small mb-0">
-            Click a marker to discover the location.
-            Scan the QR code on-site to unlock AR stories.
-          </p>
+        <div class="sidebar-box mt-4">
+          <h5 class="fw-bold mb-3">All Locations</h5>
+
+          <ul class="location-list">
+
+            <li class="location-item"
+              data-name="Traditional Pottery Shop"
+              data-category="Shops"
+              data-desc="Authentic Albanian ceramics and pottery"
+              data-hours="9:00 AM - 6:00 PM"
+              data-image="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261">
+              🏺 Traditional Pottery Shop <small>Shops</small>
+            </li>
+
+            <li class="location-item"
+              data-name="Café Pazari"
+              data-category="Cafes"
+              data-desc="Local coffee in the heart of Pazari"
+              data-hours="7:00 AM - 10:00 PM"
+              data-image="https://images.unsplash.com/photo-1509042239860-f550ce710b93">
+              ☕ Café Pazari <small>Cafes</small>
+            </li>
+
+            <li class="location-item"
+              data-name="Artisan Textile Market"
+              data-category="Markets"
+              data-desc="Handmade textiles and crafts"
+              data-hours="8:00 AM - 5:00 PM"
+              data-image="https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d">
+              🛍️ Artisan Textile Market <small>Markets</small>
+            </li>
+
+            <li class="location-item"
+              data-name="Restaurant Tradicionale"
+              data-category="Restaurants"
+              data-desc="Traditional Albanian cuisine"
+              data-hours="11:00 AM - 11:00 PM"
+              data-image="https://images.unsplash.com/photo-1600891964599-f61ba0e24092">
+              🍽️ Restaurant Tradicionale <small>Restaurants</small>
+            </li>
+
+            <li class="location-item"
+              data-name="Copper Workshop"
+              data-category="Shops"
+              data-desc="Handcrafted copper souvenirs"
+              data-hours="9:00 AM - 6:00 PM"
+              data-image="https://images.unsplash.com/photo-1519681393784-d120267933ba">
+              ⚒️ Copper Workshop <small>Shops</small>
+            </li>
+
+            <li class="location-item"
+              data-name="Morning Brew Café"
+              data-category="Cafes"
+              data-desc="Fresh coffee every morning"
+              data-hours="7:00 AM - 9:00 PM"
+              data-image="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085">
+              ☕ Morning Brew Café <small>Cafes</small>
+            </li>
+
+          </ul>
         </div>
 
       </div>
     </div>
   </div>
 </section>
+
 
 <!-- FOOTER -->
 <footer class="border-top bg-dark text-light">
