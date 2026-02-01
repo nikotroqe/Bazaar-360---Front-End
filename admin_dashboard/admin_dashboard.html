@@ -6,6 +6,8 @@
   <title>Admin Dashboard</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
   <!-- Custom CSS -->
   <link rel="stylesheet" href="admin_dashboard.css">
 </head>
@@ -72,7 +74,7 @@
     </ul>
 
     <!-- OVERVIEW -->
-    <div id="overview" class="tab-content">
+    <div id="overview" class="tab-content active">
     <!-- STATS -->
     <div class="row g-4 mb-5">
       <div class="col-md-3">
@@ -201,7 +203,7 @@
   </div>
 
   <!-- AR Stories -->
-  <div id="ar-stories" class="tab-content" style="display:none;">
+  <div id="ar-stories" class="tab-content">
   <div class="container">
     <div class="card shadow-sm">
       <div class="card-body">
@@ -279,7 +281,7 @@
 </div>
 
 <!-- Locations -->
-<div id="locations" class="tab-content" style="display:none;">
+<div id="locations" class="tab-content">
   <div class="container">
     <div class="card shadow-sm">
       <div class="card-body">
@@ -355,87 +357,39 @@
     </div>
   </div>
 </div>
-</section>
 
+<div id="events" class="tab-content">
 
-<div id="locations" class="tab-content" style="display:none;">
-  <section class="dashboard-section py-4">
-    <div class="container">
-      <div class="card shadow-sm">
-        <div class="card-body">
+  <div class="container d-flex justify-content-center">
+    <div class="card shadow-sm w-100" style="max-width: 720px;">
+      <div class="card-body text-center py-5">
 
-          <!-- HEADER -->
-          <div class="d-flex justify-content-between align-items-center mb-4">
-            <h3 class="fw-bold mb-0">Location Management</h3>
-            <button class="btn btn-dark px-4">+ Add Location</button>
-          </div>
-
-          <!-- TABLE -->
-          <div class="table-responsive">
-            <table class="table align-middle table-hover">
-              <thead class="table-light">
-                <tr>
-                  <th>Name</th>
-                  <th>Category</th>
-                  <th>Status</th>
-                  <th>Visits</th>
-                  <th class="text-end">Actions</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Traditional Pottery Shop</td>
-                  <td>Shop</td>
-                  <td><span class="status-published">Verified</span></td>
-                  <td>892</td>
-                  <td class="text-end action-icons">
-                    <i class="bi bi-eye" onclick="viewStory('The Master Coppersmith')"></i>
-                    <i class="bi bi-pencil" onclick="editStory('The Master Coppersmith')"></i>
-                    <i class="bi bi-trash" onclick="deleteStory(this)"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Café Pazari</td>
-                  <td>Café</td>
-                  <td><span class="status-published">Verified</span></td>
-                  <td>1205</td>
-                  <td class="text-end action-icons">
-                    <i class="bi bi-eye"></i>
-                    <i class="bi bi-pencil"></i>
-                    <i class="bi bi-trash"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Artisan Textile Market</td>
-                  <td>Market</td>
-                  <td><span class="status-draft">Pending</span></td>
-                  <td>654</td>
-                  <td class="text-end action-icons">
-                    <i class="bi bi-eye"></i>
-                    <i class="bi bi-pencil"></i>
-                    <i class="bi bi-trash"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Restaurant Tradicionale</td>
-                  <td>Restaurant</td>
-                  <td><span class="status-published">Verified</span></td>
-                  <td>1876</td>
-                  <td class="text-end action-icons">
-                    <i class="bi bi-eye"></i>
-                    <i class="bi bi-pencil"></i>
-                    <i class="bi bi-trash"></i>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
+        <!-- ICON -->
+        <div class="calendar-icon mx-auto mb-3">
+          <i class="bi bi-calendar-event"></i>
         </div>
+
+        <!-- TITLE -->
+        <h3 class="fw-bold mb-2">Events Management</h3>
+
+        <!-- DESCRIPTION -->
+        <p class="text-muted mb-4">
+          Create and manage cultural events at Pazari i Ri
+        </p>
+
+        <!-- BUTTON -->
+        <button class="btn btn-dark px-4">
+          + Create Event
+        </button>
+
       </div>
     </div>
-  </section>
+  </div>
+
 </div>
+
+
+</section>
 
 
   <!-- Footer -->
