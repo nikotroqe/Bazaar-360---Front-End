@@ -15,6 +15,27 @@ body {
   font-size: 2.5rem;
   font-weight: bold;
 }
+
+
+.n-box {
+    background-color: #a43d3d;
+    color: white;
+    padding: 0.3rem 0.6rem;
+    font-family: 'Segoe UI', sans-serif;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s ease;
+  }
+  .n-box:hover {
+    background-color: #c6c600;
+  }
+
+  .navbar-brand {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
 /* === HOW IT WORKS SECTION === */
 .how-it-works {
   padding: 4rem 0;

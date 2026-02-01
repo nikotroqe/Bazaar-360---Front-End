@@ -13,47 +13,43 @@ a {
   text-decoration: none;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
   color: #111;
 }
 
-/* =========================
-   NAVBAR
-========================= */
-.navbar-brand {
-  letter-spacing: 0.5px;
-}
+.n-box {
+    background-color: #a43d3d;
+    color: white;
+    padding: 0.3rem 0.6rem;
+    font-family: 'Segoe UI', sans-serif;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s ease;
+  }
+  .n-box:hover {
+    background-color: #c6c600;
+  }
 
-.navbar .nav-link {
-  font-weight: 500;
-  color: #555;
-  margin-left: 5px;
-  margin-right: 5px;
-  transition: color 0.3s ease;
-}
-
-.navbar .nav-link:hover {
-  color: #b63e3e;
-}
-
-.navbar .nav-link.active {
-  color: #b63e3e;
-  font-weight: 600;
-}
+  .navbar-brand {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+  }
 
 /* =========================
    PAGE HEADER (ABOUT HERO)
 ========================= */
 header.bg-dark {
   background: linear-gradient(
-    rgba(0, 0, 0, 0.65),
-    rgba(0, 0, 0, 0.65)
-  ),
-  url("../img/bazaar-header.jpg") center / cover no-repeat;
+      rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.65)
+    ),
+    url("../img/bazaar-header.jpg") center / cover no-repeat;
 }
 
 header h1 {
   font-size: 2.8rem;
+  color: #e0e0e0;
 }
 
 header .lead {
@@ -111,6 +107,54 @@ section ul li::marker {
 }
 
 /* =========================
+   WHAT WE OFFER - CARDS
+========================= */
+.offer-card {
+  aspect-ratio: 1 / 1; /* katror */
+  background-color: #ffffff;
+  border-radius: 14px;
+  padding: 26px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.35s ease;
+  border: 1px solid #f0f0f0;
+}
+
+.offer-card h5 {
+  font-size: 1.1rem;
+  margin-bottom: 14px;
+  color: #111;
+  position: relative;
+  padding-left: 12px;
+}
+
+.offer-card h5::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 4px;
+  height: 80%;
+  background-color: #b63e3e;
+  border-radius: 2px;
+}
+
+.offer-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+.offer-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+  border-color: #b63e3e30;
+}
+
+/* =========================
    FOOTER
 ========================= */
 footer {
@@ -132,5 +176,10 @@ footer p {
 
   section .lead {
     font-size: 1.05rem;
+  }
+
+  .offer-card {
+    aspect-ratio: auto; /* mobile: fleksibël */
+    padding: 22px;
   }
 }

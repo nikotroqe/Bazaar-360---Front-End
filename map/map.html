@@ -14,34 +14,41 @@
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="home.html">Bazaar360</a>
-    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+  <div class="container d-flex justify-content-between align-items-center">
+    <!-- Majtas: n' + Bazaar360 si bllok -->
+    <div class="d-flex align-items-center">
+      <div class="n-box me-2" title="n'">n'</div>
+      <a class="navbar-brand fw-semibold m-0" href="../home/home.html">Bazaar360</a>
+    </div>
+
+    <!-- Toggler për mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" 
+      aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- Menu -->
-      <ul class="navbar-nav me-auto">
+    <!-- Djathtas: links, search, buttons -->
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <ul class="navbar-nav mb-2 mb-lg-0 d-flex align-items-center">
         <li class="nav-item"><a class="nav-link" href="../home/home.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="../about/about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="../tour360/tour360.html">360° Tours</a></li>
-        <li class="nav-item"><a class="nav-link" href="../ar_stories/ar_stories.html">AR Stories</a></li>
+        <li class="nav-item"><a class="nav-link" href="../tour360/tour360.html">360° Exploration</a></li>
+        <li class="nav-item"><a class="nav-link active" href="../ar_stories/ar_stories.html">AR Stories</a></li>
         <li class="nav-item"><a class="nav-link" href="../events/events.html">Events</a></li>
         <li class="nav-item"><a class="nav-link" href="../map/map.html">Map</a></li>
         <li class="nav-item"><a class="nav-link" href="../contact/contact.html">Contact</a></li>
         <li class="nav-item"><a class="nav-link" href="../admin_dashboard/admin_dashboard.html">Admin</a></li>
       </ul>
 
-      <!-- Search (djathtas) -->
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search">
-        <button class="btn btn-outline-primary" type="submit">Search</button>
+      <form class="d-flex mx-3 mb-2 mb-lg-0" role="search">
+        <input class="form-control form-control-sm me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-primary btn-sm" type="submit">Search</button>
       </form>
-      <!-- Login & Register -->
+
       <div class="d-flex">
-        <a href="../login/login.html" class="btn btn-outline-secondary me-2">Login</a>
-        <a href="../sign_up/signup.html" class="btn btn-primary">Sign Up</a>
+        <a href="../login/login.html" class="btn btn-outline-secondary btn-sm me-2">Login</a>
+        <a href="../sign_up/signup.html" class="btn btn-primary btn-sm">Sign Up</a>
       </div>
     </div>
   </div>

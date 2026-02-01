@@ -17,36 +17,41 @@
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="home.html">Bazaar360</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+  <div class="container d-flex justify-content-between align-items-center">
+    <!-- Majtas: n' + Bazaar360 si bllok -->
+    <div class="d-flex align-items-center">
+      <div class="n-box me-2" title="n'">n'</div>
+      <a class="navbar-brand fw-semibold m-0" href="../home/home.html">Bazaar360</a>
+    </div>
 
-    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+    <!-- Toggler për mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" 
+      aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navMenu">
-      <!-- Menu -->
-      <ul class="navbar-nav me-auto">
+    <!-- Djathtas: links, search, buttons -->
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <ul class="navbar-nav mb-2 mb-lg-0 d-flex align-items-center">
         <li class="nav-item"><a class="nav-link" href="../home/home.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="../about/about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="../tour360/tour360.html">360° Tours</a></li>
-        <li class="nav-item"><a class="nav-link" href="../ar_stories/ar_stories.html">AR Stories</a></li>
+        <li class="nav-item"><a class="nav-link" href="../tour360/tour360.html">360° Exploration</a></li>
+        <li class="nav-item"><a class="nav-link active" href="../ar_stories/ar_stories.html">AR Stories</a></li>
         <li class="nav-item"><a class="nav-link" href="../events/events.html">Events</a></li>
         <li class="nav-item"><a class="nav-link" href="../map/map.html">Map</a></li>
         <li class="nav-item"><a class="nav-link" href="../contact/contact.html">Contact</a></li>
         <li class="nav-item"><a class="nav-link" href="../admin_dashboard/admin_dashboard.html">Admin</a></li>
       </ul>
 
-      <!-- Search (djathtas) -->
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search">
-        <button class="btn btn-outline-primary" type="submit">Search</button>
+      <form class="d-flex mx-3 mb-2 mb-lg-0" role="search">
+        <input class="form-control form-control-sm me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-primary btn-sm" type="submit">Search</button>
       </form>
-      <!-- Login & Register -->
+
       <div class="d-flex">
-        <a href="../login/login.html" class="btn btn-outline-secondary me-2">Login</a>
-        <a href="../sign_up/signup.html" class="btn btn-primary">Sign Up</a>
+        <a href="../login/login.html" class="btn btn-outline-secondary btn-sm me-2">Login</a>
+        <a href="../sign_up/signup.html" class="btn btn-primary btn-sm">Sign Up</a>
       </div>
     </div>
   </div>
@@ -63,55 +68,112 @@
 </header>
 
 <!-- ABOUT CONTENT -->
+<!-- ABOUT CONTENT -->
 <section class="py-5">
   <div class="container">
 
+    <!-- Intro -->
     <p class="lead">
-      <strong>Bazaar360</strong> is a next-generation digital platform that brings
-      the spirit, culture, and everyday life of <strong>Pazari i Ri</strong> into an
-      immersive online experience.
+      <strong>n’Bazaar360</strong> is a digital cultural initiative developed within the
+      Web Challenge program, supported by the Municipality of Tirana.
+      The platform reimagines Pazari i Ri, one of Tirana's most iconic
+      public spaces, through immersive 360° virtual tours and
+      augmented reality (AR) experiences, connecting tradition with
+      modern technology.
     </p>
 
     <p>
-      By combining <strong>360° virtual environments</strong>,
-      <strong>augmented reality storytelling</strong>, and
-      <strong>interactive navigation</strong>, Bazaar360 allows users to explore
-      the market beyond physical boundaries — anytime, anywhere.
+      Designed as a next-generation cultural platform, n'Bazaar360 allows locals and
+      international visitors to explore the market beyond physical presence—discovering
+      its stories, artisans, products, and everyday life anytime, from anywhere.
+      By blending digital storytelling with spatial technology, the project transforms
+      Pazari i Ri into a living digital archive and a flagship example of
+      Tirana Smart City.
     </p>
 
+    <!-- Vision -->
     <h3 class="mt-5 fw-semibold">Our Vision</h3>
     <p>
-      Our vision is to redefine how cultural spaces are experienced in the digital age.
-      Bazaar360 aims to transform traditional marketplaces into living digital destinations,
-      where stories, people, and products are seamlessly connected through technology.
+      To position Tirana as a forward-thinking and culturally rich city by digitally
+      preserving and promoting its urban heritage, enhancing tourism experiences, and
+      empowering local artisans through innovative technology.
     </p>
 
-    <h3 class="mt-5 fw-semibold">What Makes Bazaar360 Unique</h3>
-    <ul class="mt-3">
-      <li>Immersive 360° exploration of real locations</li>
-      <li>Augmented reality stories from artisans and vendors</li>
-      <li>Interactive maps for intuitive navigation</li>
-      <li>Digital visibility for local businesses and crafts</li>
-      <li>Designed for both locals and international visitors</li>
-    </ul>
+    <!-- What We Offer -->
+    <h3 class="mt-5 fw-semibold">What We Offer</h3>
 
-    <h3 class="mt-5 fw-semibold">Cultural Impact</h3>
+    <div class="row mt-4 g-4">
+
+      <div class="col-md-6 col-lg-3">
+        <div class="offer-card">
+          <h5 class="fw-semibold">Immersive 360° Market Experience</h5>
+          <p>
+            Explore Pazari i Ri through the first fully immersive virtual tour, capturing
+            the atmosphere, architecture, and rhythm of daily life.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="offer-card">
+          <h5 class="fw-semibold">Augmented Reality Cultural Stories</h5>
+          <p>
+            Scan QR codes on-site to unlock AR content—videos, stories, and animations that
+            connect visitors with artisans and traditions.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="offer-card">
+          <h5 class="fw-semibold">Digital Profiles for Local Businesses</h5>
+          <p>
+            Artisans and vendors gain digital visibility through dedicated profiles,
+            expanding reach and supporting the local economy.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="offer-card">
+          <h5 class="fw-semibold">Smart Tourism & Cultural Engagement</h5>
+          <p>
+            A blended physical and digital visitor journey that makes culture more
+            interactive, accessible, and engaging.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- Impact -->
+    <h3 class="mt-5 fw-semibold">Cultural & Community Impact</h3>
     <p>
-      Pazari i Ri is more than a marketplace — it is a cultural meeting point.
-      Bazaar360 preserves this identity by documenting traditions, craftsmanship,
-      and daily interactions, ensuring they remain accessible for future generations
-      in a modern, digital format.
+      n’Bazaar360 strengthens Tirana’s cultural identity by documenting crafts,
+      traditions, and personal stories that risk being lost over time.
+      The platform provides the Municipality of Tirana with a scalable and replicable
+      digital model, adaptable to other historic and cultural areas of the city.
     </p>
 
+    <p>
+      By integrating technology into a historic urban space, n’Bazaar360 contributes
+      to sustainable tourism, community engagement, and the long-term preservation of
+      Tirana’s cultural heritage.
+    </p>
+
+    <!-- Looking Ahead -->
     <h3 class="mt-5 fw-semibold">Looking Ahead</h3>
     <p>
-      Bazaar360 is built as a scalable platform, with the potential to expand
-      into additional cultural locations, support multilingual experiences,
-      and integrate future technologies such as advanced AR and virtual reality.
+      Built as a scalable digital ecosystem, n’Bazaar360 is designed to expand across
+      multiple cultural zones, support multilingual audiences, and evolve with emerging
+      technologies such as advanced augmented reality and virtual reality—shaping the
+      future of how cities tell their stories.
     </p>
 
   </div>
 </section>
+
 
 <!-- FOOTER -->
 <footer class="border-top bg-dark text-light">
