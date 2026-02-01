@@ -1,28 +1,77 @@
-document.querySelectorAll('#dashboardTabs .nav-link').forEach(tab => {
-  tab.addEventListener('click', function(event) {
-    event.preventDefault();
+document.addEventListener('DOMContentLoaded', () => {
 
-    // Heq active nga të gjithë tab-et
-    document.querySelectorAll('#dashboardTabs .nav-link').forEach(t => t.classList.remove('active'));
+  /* ==========================
+     TAB NAVIGATION
+  ========================== */
+  const tabs = document.querySelectorAll('#dashboardTabs .nav-link');
+  const contents = document.querySelectorAll('.tab-content');
 
-    // Fsheh të gjitha tab-content
-    document.querySelectorAll('.tab-content').forEach(c => {
-      c.style.display = 'none';
-      c.classList.remove('active');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', e => {
+      e.preventDefault();
+
+      tabs.forEach(t => t.classList.remove('active'));
+      contents.forEach(c => c.classList.remove('active'));
+
+      tab.classList.add('active');
+      document
+        .getElementById(tab.dataset.target)
+        .classList.add('active');
     });
+  });
 
-    // Vendos active në tabin e klikuar
-    this.classList.add('active');
+  /* ==========================
+     BUTTON ACTIONS
+  ========================== */
 
-    // Shfaq përmbajtjen që korrespondon me data-target
-    const target = this.getAttribute('data-target');
-    const content = document.getElementById(target);
-    if (content) {
-      content.style.display = 'block';
-      content.classList.add('active');
+  // + Add New (global)
+  document.getElementById('btnAddNew')?.addEventListener('click', () => {
+    const activeTab = document.querySelector('.nav-link.active')
+      ?.dataset.target;
+
+    switch (activeTab) {
+      case 'ar-stories':
+        addStory();
+        break;
+      case 'locations':
+        addLocation();
+        break;
+      case 'events':
+        createEvent();
+        break;
+      default:
+        alert('Choose a section first');
     }
   });
+
+  // + Add Story
+  document.getElementById('btnAddStory')?.addEventListener('click', addStory);
+
+  // + Add Location
+  document.getElementById('btnAddLocation')?.addEventListener('click', addLocation);
+
+  // + Create Event
+  document.getElementById('btnCreateEvent')?.addEventListener('click', createEvent);
+
 });
+
+
+/* ==========================
+   FUNCTIONS (PLACEHOLDERS)
+========================== */
+
+function addStory() {
+  alert('Open Add Story modal');
+}
+
+function addLocation() {
+  alert('Open Add Location modal');
+}
+
+function createEvent() {
+  alert('Open Create Event modal');
+}
+
 
 
 
