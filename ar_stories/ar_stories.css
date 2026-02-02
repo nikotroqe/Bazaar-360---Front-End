@@ -1,6 +1,7 @@
 body {
-  padding-top: 70px;
+  padding-top: 56px;
   font-family: Arial, sans-serif;
+  margin: 0;
 }
 
 .ar-hero {
@@ -9,6 +10,7 @@ body {
     linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
     url("https://images.unsplash.com/photo-1687294088443-f207b36b0469")
     center / cover no-repeat;
+    margin-top: 0;
 }
 
 .step-box h4 {
@@ -16,6 +18,21 @@ body {
   font-weight: bold;
 }
 
+/* Search në navbar */
+.navbar .search-form {
+  align-items: center;
+}
+
+.navbar .search-form input {
+  width: 200px;
+  border-radius: 20px;
+  padding: 6px 15px;
+  transition: width 0.3s ease;
+}
+
+.navbar .search-form input:focus {
+  width: 50px;
+}
 
 .n-box {
     background-color: #a43d3d;
@@ -35,6 +52,7 @@ body {
     font-size: 18px;
     font-weight: 600;
   }
+
 
 /* === HOW IT WORKS SECTION === */
 .how-it-works {

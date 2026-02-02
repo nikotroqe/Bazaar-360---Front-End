@@ -1,6 +1,7 @@
 body {
-  padding-top: 70px;
+  padding-top: 56px;
   background-color: #f8f9fa;
+  margin: 0;
 }
 
 .n-box {
@@ -29,6 +30,7 @@ body {
               center/cover no-repeat;
   display: flex;
   align-items: center;
+  margin-top: 0;
 }
 
 /* CARD */

@@ -1,6 +1,8 @@
 body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #f8f9fa;
+  padding-top: 56px;
+  margin: 0;
 }
 
 .n-box {
@@ -12,6 +14,7 @@ body {
     user-select: none;
     transition: background-color 0.3s ease;
   }
+  
   .n-box:hover {
     background-color: #c6c600;
   }
@@ -25,13 +28,14 @@ body {
 /* Header */
 .dashboard-hero {
   margin-top: 72px;
-  padding: 24px 0;
+  padding: 34px 0;
   background: #000000;
-  color: white;
+  margin-top: 0;
 }
 
 .dashboard-hero h1 {
   font-size: 1.8rem;
+  color: white;
 }
 
 /* Content */
@@ -51,10 +55,6 @@ body {
   border: 1px solid #ddd;
 }
 
-/* Stats */
-.stat-card {
-  border-radius: 8px;
-}
 
 /* Lists */
 .list-item {

@@ -1,6 +1,7 @@
 body {
-  padding-top: 70px;
+  padding-top: 56px; /* zvogëlo nga 70px në 56px për të përputhur lartësinë e navbar-it */
   font-family: 'Segoe UI', sans-serif;
+  margin: 0; /* siguro që nuk ka margin default */
 }
 
 .n-box {
@@ -23,16 +24,21 @@ body {
   }
 
 /* HERO */
+
+
 .hero-section {
   height: 100vh;
   background: linear-gradient(
-    rgba(0,0,0,0.6),
-    rgba(0,0,0,0.6)
-  ),
-  url("https://images.unsplash.com/photo-1695120801533-1cdf1d7d2d6a?q=80&w=1600") center/cover no-repeat;
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url("https://images.unsplash.com/photo-1695120801533-1cdf1d7d2d6a?q=80&w=1600")
+      center/cover no-repeat;
 
   display: flex;
   align-items: center;
+
+  margin-top: 0; /* siguro që nuk ka hapësirë sipër */
 }
 
 /* FEATURES */
@@ -44,7 +50,7 @@ body {
 
 .feature-box:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 }
 
 .feature-box img {
@@ -95,13 +101,11 @@ body {
   font-size: 0.95rem;
 }
 
-
 /* CTA */
 .cta-section {
   background: #b63e3e;
   padding: 80px 0;
 }
-
 /* Search në navbar */
 .navbar .search-form {
   align-items: center;
